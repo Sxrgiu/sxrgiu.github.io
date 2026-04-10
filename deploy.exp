@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn surge . pure-honesty.surge.sh
+expect "email:"
+send "vibeful.ai.agent.test@gmail.com\r"
+expect "password:"
+send "SecurePassword123!\r"
+expect eof
