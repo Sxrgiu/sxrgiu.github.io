@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Manifesto - Pure Honesty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-100: #f1f5f9;
+            --accent: #38bdf8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--slate-900);
+            color: var(--slate-100);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        p {
+            font-size: 16px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .manifesto-box {
+            text-align: left;
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 2px solid var(--accent);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: var(--slate-100);
+            color: var(--slate-900);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>TRANSACTION COMPLETE</h1>
+        <p>Thank you for participating in the experiment. Your support allows the concept to continue existing.</p>
+        
+        <div class="manifesto-box">
+            "In an internet entirely built around extracting value, capturing attention, and obscuring motives through complex marketing funnels—the ultimate disruption is total, unsolicited, absolute honesty."
+        </div>
+
+        <a href="https://pure-honesty.surge.sh" class="download-btn">Return to the Void</a>
+    </div>
+
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

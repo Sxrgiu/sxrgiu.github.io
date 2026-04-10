@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void - Pure Honesty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { overflow: hidden; }
+        .ambient-container {
+            position: absolute;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .floating-text {
+            position: absolute;
+            font-size: 2vw;
+            color: rgba(255,255,255,0.03);
+            text-transform: uppercase;
+            letter-spacing: 1vw;
+            white-space: nowrap;
+            animation: drift 20s linear infinite;
+        }
+        
+        .floating-text:nth-child(2) {
+            top: 30%; font-size: 4vw; animation-duration: 35s; animation-direction: reverse; color: rgba(255,255,255,0.01);
+        }
+        .floating-text:nth-child(3) {
+            top: 70%; font-size: 1.5vw; animation-duration: 15s; letter-spacing: 2vw;
+        }
+
+        .center-fade {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: pulse-glow 6s infinite alternate ease-in-out;
+        }
+
+        @keyframes drift {
+            from { transform: translateX(50vw); }
+            to { transform: translateX(-150vw); }
+        }
+
+        @keyframes pulse-glow {
+            0% { opacity: 0.1; text-shadow: 0 0 0px var(--accent-solid); }
+            100% { opacity: 0.8; text-shadow: 0 0 20px var(--accent-solid); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-selector">
+    <span onclick="doGTranslate('en')">EN</span>
+    <span onclick="doGTranslate('fr')">FR</span>
+    <span onclick="doGTranslate('es')">ES</span>
+</div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="vibeful.html">Vibeful</a>
+        <a href="moments.html">Moments</a>
+        <a href="collection.html">Collection</a>
+        <a href="animation.html" class="active">Animation</a>
+        <a href="vanishing.html">Vanishing</a>
+        <a href="play.html">Play</a>
+        <a href="why.html">Why</a>
+    </nav>
+
+    <div class="ambient-container">
+        <div class="floating-text">Nothing is happening</div>
+        <div class="floating-text">You are simply observing</div>
+        <div class="floating-text">There is no product here</div>
+    </div>
+
+    <main class="page-wrapper" style="z-index: 20; position: relative; height: 100vh; justify-content: center;">
+        <div class="center-fade">This didn't have to exist</div>
+
+        <div class="tier-card sleek-btn" data-link="https://buy.stripe.com/6oU00cdMP0cl20d8Omdby0g" style="margin-top: 5rem; max-width: 300px; background: rgba(20,23,28,0.5); backdrop-filter: blur(10px);">
+            <div class="tier-header">You noticed this</div>
+            <div class="tier-price">$4</div>
+            <button class="action-btn outline-btn">Acknowledge</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+<div class="site-footer">
+        <span class="footer-center">Made by Sxrgiu</span>
+        <span class="footer-role">Observer</span>
+    </div>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
