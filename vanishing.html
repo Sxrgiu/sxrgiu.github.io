@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanishing - Pure Honesty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .urgency-container {
+            text-align: center;
+            margin-top: 10vh;
+        }
+        .digital-clock {
+            font-family: monospace;
+            font-size: 5rem;
+            color: #ef4444; /* Alert red */
+            text-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
+            margin: 2rem 0;
+            font-weight: 300;
+        }
+        .panic-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            max-width: 400px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
+        }
+        
+        .panic-btn {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            color: #ef4444;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .panic-btn:hover {
+            background: #ef4444;
+            color: #fff;
+            box-shadow: 0 0 40px rgba(239, 68, 68, 0.6);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-selector">
+    <span onclick="doGTranslate('en')">EN</span>
+    <span onclick="doGTranslate('fr')">FR</span>
+    <span onclick="doGTranslate('es')">ES</span>
+</div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="vibeful.html">Vibeful</a>
+        <a href="moments.html">Moments</a>
+        <a href="collection.html">Collection</a>
+        <a href="animation.html">Animation</a>
+        <a href="vanishing.html" class="active">Vanishing</a>
+        <a href="play.html">Play</a>
+        <a href="why.html">Why</a>
+    </nav>
+
+    <main class="page-wrapper urgency-container">
+        <h1 class="hook-title" style="color: #ef4444;">This offer is actively disappearing.</h1>
+        
+        <div class="digital-clock" id="clock">00:05:00</div>
+        
+        <p class="panic-text">
+            There is absolutely no reason to buy this. It is $10 for a completely fictional sense of urgency. When the timer hits zero, the button will permanently disappear from this instance of the page.
+        </p>
+
+        <div id="buy-container">
+            <!-- This acts as a conceptual link. The user needs to add a Stripe URL to an onclick -->
+            <button class="panic-btn" onclick="window.location.href='https://buy.stripe.com/28EbIU6kn7ENawJggOdby0i'">Buy Panic ($10)</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Real-time pure panic countdown
+        let totalSeconds = 300; // 5 minutes
+        const clockElement = document.getElementById('clock');
+        const buyContainer = document.getElementById('buy-container');
+
+        const interval = setInterval(() => {
+            totalSeconds--;
+            
+            let minutes = Math.floor(totalSeconds / 60);
+            let seconds = totalSeconds % 60;
+            
+            clockElement.innerText = `00:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            if (totalSeconds <= 0) {
+                clearInterval(interval);
+                clockElement.innerText = "GONE.";
+                clockElement.style.color = "#475569";
+                clockElement.style.textShadow = "none";
+                buyContainer.innerHTML = "<p style='color: #64748B;'>The panic has subsided. The opportunity is lost.</p>";
+            }
+        }, 1000);
+    </script>
+<div class="site-footer">
+        <span class="footer-center">Made by Sxrgiu</span>
+        <span class="footer-role">Timekeeper</span>
+    </div>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
