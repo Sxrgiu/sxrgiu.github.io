@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - Pure Honesty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="lang-selector">
+    <span onclick="doGTranslate('en')">EN</span>
+    <span onclick="doGTranslate('fr')">FR</span>
+    <span onclick="doGTranslate('es')">ES</span>
+</div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="vibeful.html">Vibeful</a>
+        <a href="moments.html">Moments</a>
+        <a href="collection.html" class="active">Collection</a>
+        <a href="animation.html">Animation</a>
+        <a href="vanishing.html">Vanishing</a>
+        <a href="play.html">Play</a>
+        <a href="why.html">Why</a>
+    </nav>
+
+    <main class="page-wrapper" style="margin-top: 6rem; width: 100%; max-width: 900px;">
+        <div class="header-section">
+            <h1 class="hook-title" style="font-size: 1.8rem;">The Global Archive.</h1>
+            <p class="core-message">
+                A catalog of the abstract ideas currently owned by individuals across the internet. You are entirely welcome to add to it.
+            </p>
+        </div>
+
+        <div class="pricing-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="tier-card" style="opacity: 0.5; cursor: default;">
+                <div class="tier-header">Digital Air</div>
+                <div style="font-size: 0.8rem; color: #4ADE80; margin-bottom: 20px;">Acquired 412 times</div>
+                <div class="tier-desc">Owned globally by individuals breathing life into this server.</div>
+            </div>
+            
+            <div class="tier-card" style="opacity: 0.5; cursor: default;">
+                <div class="tier-header">A Quiet Yes</div>
+                <div style="font-size: 0.8rem; color: #4ADE80; margin-bottom: 20px;">Acquired 89 times</div>
+                <div class="tier-desc">The loudest form of conceptual agreement recorded in our database.</div>
+            </div>
+
+            <div class="tier-card" style="opacity: 0.5; cursor: default;">
+                <div class="tier-header">Absolute Silence</div>
+                <div style="font-size: 0.8rem; color: #4ADE80; margin-bottom: 20px;">Acquired 3 times</div>
+                <div class="tier-desc">Three extremely elite patrons funding the void permanently.</div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="tier-card sleek-btn" data-link="https://buy.stripe.com/00wbIU38b2kteMZd4Cdby0j" style="max-width: 400px; margin: 0 auto;">
+            <div class="tier-header">A Quiet Decision</div>
+            <div class="tier-price">$5</div>
+            <div class="tier-desc">Purchase your own abstract concept and permanently join the archive.</div>
+            <button class="action-btn solid-btn">Join</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+<div class="site-footer">
+        <span class="footer-center">Made by Sxrgiu</span>
+        <span class="footer-role">Digital Archivist</span>
+    </div>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
