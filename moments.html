@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moments - Pure Honesty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        .moment-card {
+            background: rgba(30, 41, 59, 0.2);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: all 0.5s ease;
+        }
+        .moment-card:hover {
+            background: rgba(30, 41, 59, 0.4);
+            border-color: rgba(255,255,255,0.1);
+        }
+        .useless-btn {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s;
+            margin-top: 15px;
+        }
+        .useless-btn:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        .timer-display {
+            font-family: monospace;
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--accent-solid);
+            margin: 1rem 0;
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-selector">
+    <span onclick="doGTranslate('en')">EN</span>
+    <span onclick="doGTranslate('fr')">FR</span>
+    <span onclick="doGTranslate('es')">ES</span>
+</div>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="vibeful.html">Vibeful</a>
+        <a href="moments.html" class="active">Moments</a>
+        <a href="collection.html">Collection</a>
+        <a href="animation.html">Animation</a>
+        <a href="vanishing.html">Vanishing</a>
+        <a href="play.html">Play</a>
+        <a href="why.html">Why</a>
+    </nav>
+
+    <main class="page-wrapper" style="margin-top: 6rem; max-width: 600px;">
+        <div class="header-section">
+            <h1 class="hook-title" style="font-size: 1.8rem;">Interactive Nothingness.</h1>
+            <p class="core-message">
+                A collection of entirely useless digital interactions designed simply to be observed.
+            </p>
+        </div>
+
+        <div class="moment-card">
+            <h3 style="font-weight: 400; margin-bottom: 5px;">The Button of No Origin</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">This button explicitly does nothing. No data is sent. No state is saved.</p>
+            <button class="useless-btn" onclick="this.innerText = 'You clicked. The void remains unchanged.'">Click Me</button>
+        </div>
+
+        <div class="moment-card">
+            <h3 style="font-weight: 400; margin-bottom: 5px;">Time Spent Considering Nothing</h3>
+            <div class="timer-display" id="time-spent">0.0s</div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">The exact amount of time you have existed on this specific page.</p>
+        </div>
+
+        <div class="tier-card sleek-btn" data-link="https://buy.stripe.com/fZueV6bEH6AJ5cpe8Gdby0h" style="margin-top: 3rem;">
+            <div class="tier-header">A Second of Your Time</div>
+            <div class="tier-price">$2</div>
+            <div class="tier-desc">A highly conceptual purchase acknowledging the time you just spent here.</div>
+            <button class="action-btn outline-btn">Acknowledge</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        let seconds = 0.0;
+        setInterval(() => {
+            seconds += 0.1;
+            document.getElementById('time-spent').innerText = seconds.toFixed(1) + 's';
+        }, 100);
+    </script>
+<div class="site-footer">
+        <span class="footer-center">Made by Sxrgiu</span>
+        <span class="footer-role">Self-Directed</span>
+    </div>
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr,es', autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
